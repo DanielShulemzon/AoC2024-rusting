@@ -38,7 +38,7 @@ fn main() {
         sum += left_num * occurences;
     }
 
-    println!("sum is: {}", sum);
+    println!("The result to day1_2 is: {}", sum);
 }
 
 fn get_left_number(line: &str) -> i32 {

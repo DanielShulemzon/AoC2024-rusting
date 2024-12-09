@@ -27,7 +27,7 @@ fn main() {
         sum += (n1 - n2).abs();
     }
 
-    println!("{}", sum)
+    println!("The result to day1_1 is: {}", sum)
 }
 
 fn extract_numbers(line: &str) -> (i32, i32) {

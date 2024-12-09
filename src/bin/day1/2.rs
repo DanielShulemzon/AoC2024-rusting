@@ -1,19 +1,16 @@
 use std::collections::HashMap;
-use std::fs::read_to_string;
+
+use aoc2024_rs::Helper;
 
 fn main() {
     let file_path = "input_files/day1_input";
-    let lines: Vec<String> = read_to_string(file_path)
-        .unwrap()
-        .lines()
-        .map(String::from)
-        .collect();
+    let lines = Helper::read_lines(file_path).unwrap();
 
     let mut right_occurrences = HashMap::<i32, i32>::new();
 
     // iterate the lines for the first time to count how many instances of the numbers on the right
     // exist.
-    for line in &lines {
+    for line in lines.flatten() {
         let right_num = get_right_number(line.as_str());
 
         // update the map, with a default number of 1.
@@ -23,9 +20,12 @@ fn main() {
             .or_insert(1);
     }
 
+    // load the lines again (lines were moved by iteration).
+    let lines = Helper::read_lines(file_path).unwrap();
+
     let mut sum = 0;
 
-    for line in &lines {
+    for line in lines.flatten() {
         let left_num = get_left_number(line.as_str());
 
         //search if occurence is found and update total sum.

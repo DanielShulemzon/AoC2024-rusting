@@ -1,10 +1,8 @@
-use std::fs::File;
-use std::io::{self, BufRead};
+use aoc2024_rs::Helper;
 
 fn main() {
     let file_path = "input_files/day1_input";
-    let input_file = File::open(file_path).unwrap();
-    let lines = io::BufReader::new(input_file).lines();
+    let lines = Helper::read_lines(file_path).unwrap();
 
     let mut sum = 0;
 

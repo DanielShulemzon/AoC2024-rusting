@@ -16,3 +16,15 @@ name = "day1_2"
 path = "src/bin/day1/2.rs"
 test = false
 bench = false
+
+[[bin]]
+name = "day2_1"
+path = "src/bin/day2/1.rs"
+test = false
+bench = false
+
+[[bin]]
+name = "day2_2"
+path = "src/bin/day2/2.rs"
+test = false
+bench = false

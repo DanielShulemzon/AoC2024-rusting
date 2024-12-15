@@ -82,3 +82,9 @@ name = "day7"
 path = "src/bin/day7/day7.rs"
 test = false
 bench = false
+
+[[bin]]
+name = "day8"
+path = "src/bin/day8/day8.rs"
+test = false
+bench = false
